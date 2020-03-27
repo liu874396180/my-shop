@@ -1,0 +1,35 @@
+@import "../../common/less/px2rem.less";
+@import "../../common/style/common.less";
+@import '../../common/fonts/iconfont.css';
+
+.headers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .px2rem(98);
+    height: @px2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @base-color;
+    color: #ffffff;
+    z-index: 100;
+
+    .margin-ft {
+        .px2rem(20);
+        padding: 0 @px2rem;
+    }
+
+    .title {
+        .px2rem(50);
+        font-size: @px2rem;
+    }
+}
+
+.nav-slide {
+    .coverScreen(fixed);
+    .px2rem(98);
+    margin-top: @px2rem;
+    z-index: 99;
+}

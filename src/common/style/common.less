@@ -1,0 +1,40 @@
+@import "../less/px2rem.less";
+@base-color: #337cb5;
+
+.coverScreen(@position: absolute, @backColor: #fff) when (iskeyword(@position)),
+(iscolor(@backColor)) {
+    position: @position;
+    top: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    widows: 100%;
+    height: 100%;
+    background-color: @backColor;
+}
+
+body {
+    background-color: #F5F7FA;
+    width: 100%;
+    height: 100%;
+    .px2rem(14);
+    font-size: @px2rem;
+}
+
+.ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.ellipsis2() {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
